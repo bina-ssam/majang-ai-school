@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>마장초등학교 2026 AI 중점학교 · Q-AIAT 마장</title>
+<meta name="description" content="질문으로 그리는 예술, 기술로 띄우는 미래 — 마장초등학교 2026 AI 중점학교">
+<link rel="preconnect" href="https://cdn-front-door.elice.io" crossorigin>
+<link rel="stylesheet" href="https://font.elice.io/css?family=Elice+Digital+Baeum">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css">
+<style>
+:root{
+  --display:"Elice Digital Baeum","Pretendard",system-ui,sans-serif;
+  --ink:#2a1840; --sub:#6b5a80; --line:#eadff3;
+  --p1:#5b1f8f; --p2:#8a3fc4; --p3:#b47be0;
+  --c1:#7a2fb5; --c1s:#f3e7fb;      /* 과제 1 보라 */
+  --c2:#12927d; --c2s:#e2f6f1;      /* 과제 2 청록 */
+  --c3:#e2566b; --c3s:#fdeaec;      /* 과제 3 코랄 */
+  --q:#e5462f; --a:#1f6fe0; --i:#f08a1c; --t:#17a673;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,system-ui,sans-serif;color:var(--ink);background:#f7f1fb;line-height:1.55;-webkit-text-size-adjust:100%;word-break:keep-all}
+p,h1,h2{text-wrap:balance}
+h1,h2,h3,.jua{font-family:var(--display);font-weight:700;letter-spacing:-.01em}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+
+/* ── 위쪽 메뉴 ── */
+.top{position:sticky;top:0;z-index:20;background:rgba(74,22,120,.92);backdrop-filter:blur(8px);color:#fff}
+.top .wrap{display:flex;align-items:center;gap:12px;height:54px}
+.logo{font-family:var(--display);font-weight:700;font-size:20px;text-decoration:none;white-space:nowrap;background:#fff;border-radius:99px;padding:3px 14px}
+.kq{color:var(--q)}.ka{color:var(--a)}.ki{color:var(--i)}.kt{color:var(--t)}.kd{color:#9a8aad}
+.logo b{font-weight:700}.logo span:not(.kd){color:var(--ink)}
+.menu{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{text-decoration:none;white-space:nowrap;font-weight:600;font-size:14px;padding:7px 12px;border-radius:99px}
+.menu a:hover{background:rgba(255,255,255,.18)}
+
+/* ── 첫 화면 ── */
+.hero{position:relative;overflow:hidden;color:#fff;text-align:center;padding:56px 0 110px;
+  background:radial-gradient(900px 420px at 80% 0,#a04fe0 0,transparent 60%),linear-gradient(160deg,#4a1678 0,#6a23a8 55%,#8f47cf 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.7;
+  background-image:radial-gradient(#fff 1.4px,transparent 1.6px),radial-gradient(#ffe9a8 1.2px,transparent 1.4px);
+  background-size:120px 120px,170px 170px;background-position:10px 20px,70px 90px}
+.hero>*{position:relative}
+.badge{display:inline-block;background:#fff;color:var(--ink);border-radius:99px;padding:10px 26px 8px;box-shadow:0 6px 0 rgba(0,0,0,.15)}
+.badge .n{font-family:var(--display);font-weight:700;font-size:clamp(26px,6vw,40px);line-height:1.1}
+.badge .n b{font-weight:700}
+.badge small{display:block;font-weight:700;color:var(--p1);font-size:clamp(13px,3.2vw,16px)}
+.hero h1{margin:26px 0 6px;font-size:clamp(40px,10vw,84px);line-height:1.05;text-shadow:0 4px 0 rgba(0,0,0,.18)}
+.hero h1 em{font-style:normal;color:#7df0c4}
+.hero p{margin:0 auto;max-width:560px;font-size:clamp(15px,3.6vw,18px);opacity:.92}
+.qaiat{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:24px 0 0;padding:0;list-style:none}
+.qaiat li{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:6px 14px 6px 6px;font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px}
+.qaiat i{font-style:normal;font-family:var(--display);font-weight:700;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff}
+.drone{position:absolute;width:86px;animation:fly 7s ease-in-out infinite}
+.drone.d1{top:22px;left:6%}.drone.d2{top:90px;right:7%;width:64px;animation-delay:-3s}
+@keyframes fly{0%,100%{transform:translate(0,0) rotate(-4deg)}50%{transform:translate(14px,-14px) rotate(4deg)}}
+.hill{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px}
+@media (prefers-reduced-motion:reduce){.drone{animation:none}html{scroll-behavior:auto}}
+
+/* ── 흐름 ── */
+.flow{margin-top:-56px;position:relative;z-index:2}
+.flow ol{list-style:none;margin:0;padding:14px;background:#fff;border-radius:24px;box-shadow:0 10px 30px rgba(74,22,120,.14);display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.flow li{position:relative;padding:12px 12px 12px 14px;border-radius:16px;background:#faf5fe}
+.flow li:not(:last-child)::after{content:"›";position:absolute;right:-11px;top:50%;transform:translateY(-50%);font-size:26px;font-weight:800;color:var(--p2);z-index:1}
+.flow .ic{font-size:26px;line-height:1}
+.flow h3{margin:4px 0 2px;font-size:21px;color:var(--p1)}
+.flow p{margin:0;font-size:14px;color:var(--sub);font-weight:500}
+@media (max-width:820px){.flow ol{grid-template-columns:1fr 1fr}.flow li:nth-child(2)::after{display:none}}
+@media (max-width:460px){.flow ol{grid-template-columns:1fr}.flow li::after{display:none}}
+
+/* ── 과제 공통 ── */
+.task{padding:54px 0 8px;scroll-margin-top:54px}
+.thead{display:flex;align-items:center;gap:14px;border-radius:99px;padding:8px 22px 8px 8px;color:#fff;background:var(--tc)}
+.thead .num{flex:none;width:58px;height:58px;border-radius:50%;background:#fff;color:var(--tc);display:grid;place-items:center;font-family:var(--display);font-weight:700;line-height:1;text-align:center}
+.thead .num small{display:block;font-size:11px}.thead .num b{font-weight:700;font-size:28px}
+.thead h2{margin:0;font-size:clamp(20px,4.6vw,30px);line-height:1.2}
+.panel{background:#fff;border:2px solid var(--ts);border-radius:22px;padding:20px;margin-top:14px}
+.panel>h3{margin:0 0 12px;font-size:20px;color:var(--tc);display:flex;align-items:center;gap:10px}
+.panel>h3::after{content:"";flex:1;height:2px;background:var(--ts)}
+.t1{--tc:var(--c1);--ts:var(--c1s)}.t2{--tc:var(--c2);--ts:var(--c2s)}.t3{--tc:var(--c3);--ts:var(--c3s)}
+
+/* 과제 1 — 학년 고르기 */
+.grades{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.grade{text-align:left;border:2px solid var(--ts);background:var(--ts);border-radius:16px;padding:12px 14px;transition:.15s}
+.grade b{display:inline-block;font-family:var(--display);font-weight:700;background:var(--tc);color:#fff;border-radius:99px;padding:1px 12px;font-size:15px}
+.grade span{display:block;margin-top:6px;font-weight:700;font-size:15px;line-height:1.35}
+.grade:hover{border-color:var(--p3)}
+.grade[aria-selected=true]{background:#fff;border-color:var(--tc);box-shadow:0 6px 16px rgba(122,47,181,.18)}
+@media (max-width:820px){.grades{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.grades{grid-template-columns:1fr}}
+.note{margin:14px 0 10px;color:var(--sub);font-size:14px;font-weight:500}
+
+/* 사진 모음 */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.shot{position:relative;border:0;padding:0;border-radius:14px;overflow:hidden;background:#eee;aspect-ratio:4/3}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.shot:hover img{transform:scale(1.05)}
+.shot span{position:absolute;left:6px;right:6px;bottom:6px;background:var(--tc);color:#fff;border-radius:99px;padding:2px 10px;font-size:12.5px;font-weight:700;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shot .play{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;display:grid;place-items:center;font-size:13px;padding-left:2px}
+@media (max-width:460px){.gal{grid-template-columns:1fr 1fr}}
+
+/* 과제 2·3 — 번호 목록 */
+.list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;counter-reset:n}
+.list li{counter-increment:n;display:flex;align-items:center;gap:10px;background:var(--ts);border-radius:12px;padding:9px 12px;font-weight:600;font-size:15px}
+.list li::before{content:counter(n);flex:none;width:24px;height:24px;border-radius:50%;background:var(--tc);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800}
+@media (max-width:640px){.list{grid-template-columns:1fr}}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.link{display:block;text-decoration:none;border-radius:18px;padding:18px 20px;color:#fff;background:linear-gradient(135deg,var(--tc),#3cc0a6);transition:transform .15s}
+.link:hover{transform:translateY(-3px)}
+.link small{font-weight:700;opacity:.9}
+.link strong{display:block;font-family:var(--display);font-weight:700;font-size:22px;margin:2px 0 4px}
+.link p{margin:0;font-size:14px;opacity:.95}
+.link em{font-style:normal;display:inline-block;margin-top:10px;background:#fff;color:var(--tc);border-radius:99px;padding:3px 14px;font-weight:800;font-size:13px}
+@media (max-width:640px){.links{grid-template-columns:1fr}}
+.booth{margin-top:14px;border-radius:16px;background:var(--tc);color:#fff;text-align:center;font-family:var(--display);font-weight:700;font-size:clamp(16px,3.8vw,21px);padding:12px 16px}
+
+/* 아래쪽 */
+footer{margin-top:60px;background:#4a1678;color:#e9d9f7;text-align:center;padding:26px 16px;font-size:14px}
+footer b{font-family:var(--display);font-weight:700;font-size:18px;color:#fff;display:block}
+
+/* 크게 보기 */
+#lb{position:fixed;inset:0;z-index:50;background:rgba(20,8,34,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:54px 12px 14px}
+#lb[hidden]{display:none}
+#lb .stage{flex:1;min-height:0;width:100%;display:flex;align-items:center;justify-content:center}
+#lb img,#lb video{max-width:100%;max-height:100%;border-radius:10px}
+#lb .cap{color:#fff;font-weight:700;padding:12px 0 2px;text-align:center}
+#lb .cap small{opacity:.7;font-weight:500;margin-left:8px}
+#lb button{position:absolute;border:0;background:rgba(255,255,255,.16);color:#fff;border-radius:50%;width:44px;height:44px;font-size:22px;line-height:1}
+#lb button:hover{background:rgba(255,255,255,.3)}
+#lb .x{top:8px;right:10px}#lb .pv{left:10px;top:50%}#lb .nx{right:10px;top:50%}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top"><b class="kq">Q</b><span class="kd">-</span><b class="ka">AI</b><b class="ki">A</b><b class="kt">T</b> <span>마장</span></a>
+  <nav class="menu" id="menu"></nav>
+</div></header>
+
+<main id="app"></main>
+
+<footer><b id="fschool"></b><span id="fnote"></span></footer>
+
+<div id="lb" hidden role="dialog" aria-modal="true" aria-label="크게 보기">
+  <button class="x" data-lb="x" aria-label="닫기">✕</button>
+  <button class="pv" data-lb="-1" aria-label="이전">‹</button>
+  <button class="nx" data-lb="1" aria-label="다음">›</button>
+  <div class="stage" id="lbstage"></div>
+  <div class="cap" id="lbcap"></div>
+</div>
+
+<script>
+/* =====================================================================
+   ✏️ 여기만 고치면 사이트 내용이 바뀝니다
+   - 글자는 따옴표 ' ' 안쪽만 고치세요.
+   - 사진은 files/ 폴더에 넣고, 아래 목록에 한 줄을 더하면 됩니다.
+   ===================================================================== */
+const SITE = {
+  school: '마장초등학교',
+  year: '2026',
+  title: 'AI 중점학교',
+  slogan: '질문으로 그리는 예술, 기술로 띄우는 미래',
+  // Q-AIAT 네 글자 뜻
+  qaiat: [
+    { ch: 'Q', color: 'var(--q)', word: '질문' },
+    { ch: 'AI', color: 'var(--a)', word: 'AI' },
+    { ch: 'A', color: 'var(--i)', word: '예술' },
+    { ch: 'T', color: 'var(--t)', word: '기술' },
+  ],
+  // AI 중점학교 흐름 (네 칸)
+  flow: [
+    { ic: '💡', name: '운영 필요성',  desc: '페스타 운영 노하우·실습 인프라<br>지역 AI 교육 격차 해소' },
+    { ic: '🧩', name: 'Q-AIAT 교육', desc: '질문·AI·예술·기술 융합<br>전 학년 위계형 교육과정' },
+    { ic: '🎯', name: '3대 운영 목표', desc: 'Q-AIAT 교육과정 정착<br>페스티벌 거점화·시민성 함양' },
+    { ic: '🚀', name: '비전',        desc: '질문과 기술이 융합된<br>미래 교육 선도학교' },
+  ],
+};
+
+/* ── 과제 1 ── 학년별 AI·정보교육
+   사진 한 줄 = ['폴더', '번호', 'p'(사진) 또는 'v'(영상), '설명']
+   사진 파일 위치: files/story/<폴더>/<번호>.jpg  (작은 그림은 그 안의 thumb/ 폴더) */
+const TASK1 = {
+  title: 'AI·정보 수업 확대 및 학년별 운영',
+  sub: '학년별 AI·정보교육',
+  note: '학년을 누르면 그 학년의 수업 사진과 영상이 나옵니다.',
+  grades: [
+    { label: '1~2학년', name: '디지털과 친해지는 AI 새싹 & 놀이터', items: [
+      ['g1', '01', 'p', '디지털 교육 활동'], ['g1', '02', 'p', '디지털 교육 활동'], ['g1', '03', 'p', '디지털 교육 활동'],
+      ['g1', '05', 'p', '디지털 교육 활동'], ['g1', '08', 'p', '디지털 교육 활동'], ['g1', '09', 'p', '디지털 교육 활동'],
+      ['g2', '01', 'p', '북크리에이터로 책 만들기'], ['g2', '02', 'p', '북크리에이터로 책 만들기'],
+      ['g2', '03', 'p', '젭 퀴즈'], ['g2', '04', 'p', '젭 퀴즈'], ['g2', '05', 'p', '젭 퀴즈'],
+      ['g2', '06', 'p', '하이러닝 수업'], ['g2', '07', 'p', '하이러닝 수업'], ['g2', '08', 'p', '하이러닝 수업'],
+    ] },
+    { label: '3학년', name: '생성형 AI와 창작하는 ‘AI 탐험대 & 디자이너’', items: [
+      ['g3', '11', 'p', '캔바 활동'], ['g3', '21', 'p', '캔바로 뮤지컬 배경화면 만들기'], ['g3', '22', 'v', '캔바로 뮤지컬 배경화면 만들기'],
+      ['g3', '09', 'p', '아트봉봉'], ['g3', '10', 'p', '아트봉봉'], ['g3', '07', 'v', '마이크로비트 코딩'],
+      ['g3', '04', 'p', '디지털튜터와 함께하는 수업'], ['g3', '05', 'p', '디지털튜터 한글 수업'],
+      ['g3', '06', 'p', '똑똑수학탐험대 (기초학습)'], ['g3', '08', 'p', '매쓰홀릭 (심화학습)'],
+      ['g3', '13', 'p', '띵커벨 독서퀴즈 대회'], ['g3', '14', 'p', '띵커벨 독서퀴즈 대회'], ['g3', '15', 'p', '띵커벨 독서퀴즈 대회'],
+      ['g3', '16', 'p', '띵커벨 독서퀴즈 대회'], ['g3', '17', 'p', '띵커벨 독서퀴즈 대회'], ['g3', '18', 'p', '띵커벨 독서퀴즈 대회'],
+      ['g3', '19', 'p', '하이러닝 수업'], ['g3', '20', 'p', '하이러닝 수업'],
+    ] },
+    { label: '4학년', name: '피지컬AI 기반 창의융합교육(학교자율시간)', items: [
+      ['g4', '02', 'v', '레고 스파이크 프라임 활동'], ['g4', '05', 'v', '레고 프라임으로 댄싱머신 만들기'],
+      ['g4', '06', 'v', '스파이크 프라임 메뚜기 춤'], ['g4', '03', 'p', '레고 에센셜로 놀이기구 코딩하기'],
+      ['g4', '04', 'v', '레고 에센셜로 만든 놀이동산'], ['g4', '09', 'p', '오조봇 코딩 체험'],
+      ['g4', '10', 'v', '오조타워'], ['g4', '01', 'p', '띵커벨 퀴즈로 단원 정리하기'],
+    ] },
+    { label: '5~6학년', name: '문제를 해결하는 AI 코딩 & 메이커(정보교육)', items: [
+      ['g5', '10', 'p', '제미나이 활용'], ['g5', '11', 'p', '캔바로 나만의 영어 이름 캐릭터 만들기'], ['g5', '12', 'p', '캔바로 나만의 영어 이름 캐릭터 만들기'],
+      ['g5', '13', 'p', '패들렛으로 영어 이름 캐릭터 공유'], ['g5', '03', 'p', '리딩앤스쿨 AI 발음 피드백'], ['g5', '04', 'p', '리딩앤스쿨 AI 발음 피드백'],
+      ['g5', '05', 'p', '리딩앤스쿨 영어 독서'], ['g5', '06', 'p', '리딩앤스쿨 영어 독서'], ['g5', '07', 'p', '리딩앤스쿨 영어 독서'],
+      ['g5', '08', 'p', '리딩앤스쿨 영단어 공부'], ['g5', '09', 'p', '리딩앤스쿨 영단어 공부'],
+      ['g5', '01', 'p', '교과서 디지털 교육자료'], ['g5', '02', 'p', '교과서 디지털 교육자료'],
+      ['g6', '01', 'p', '하이러닝 수업'], ['g6', '02', 'p', '하이러닝 수업'], ['g6', '03', 'p', '하이러닝 수업'],
+      ['g6', '05', 'p', '국어 속담 하이러닝'], ['g6', '04', 'p', '평화통일 프로젝트'], ['g6', '12', 'p', '평화통일 프로젝트'],
+      ['g6', '06', 'p', '디지털 매체 발표'], ['g6', '07', 'p', '영어 활동'], ['g6', '08', 'p', '캔바로 만들기 활동'],
+      ['g6', '09', 'p', '크롬북 활용'], ['g6', '10', 'p', '크롬북 활용'], ['g6', '11', 'p', '패들렛 활동'],
+    ] },
+  ],
+};
+
+/* ── 과제 2 ── AI 교사 동아리 연수 */
+const TASK2 = {
+  title: 'AI 수업역량 강화 및 나눔',
+  sub: 'AI 교사 동아리 연수 주제',
+  topics: [
+    '스파이크프라임 활용 피지컬AI 교육 알아보기',
+    '드론 활용 창의융합교육',
+    '하이러닝 AI 논술형 평가 설계 및 실행',
+    '쉽고 간단하게 하는 팅커캐드, 3D프린터(개념, 원리, 출력) 활용 메이커',
+    '패들렛과 함께 하는 시공간 여행',
+    '개념기반 음악 AI 이론수업',
+    '바이브코딩으로 만드는 과학 게임',
+    '오조봇 마을 탐험 수업',
+    '마인크래프트 에듀케이션으로 만드는 발명품',
+    '아트봉봉으로 우리반 미술관 전시',
+    '책 속 이야기로 펼치는 노벨엔지니어링 수업',
+    '팅커캐드로 만드는 건축물 등',
+  ],
+  linkTitle: '선생님들이 만들고 나눈 자료',
+  // 누르면 새 창으로 열립니다
+  links: [
+    { tag: '함께 성장하는 선생님', name: 'AI 에듀테크 교사 동아리 자료집',
+      desc: 'AI 에듀테크를 함께 공부하고 수업을 나누며 성장한 선생님들의 자료집입니다.',
+      url: 'https://padlet.com/embed/s023leshyly7poik17fj' },
+    { tag: '바이브 코딩 웹앱', name: '교사 Vibe ON 수업 자료',
+      desc: '선생님들이 바이브 코딩으로 직접 만든 수업용 웹앱을 체험해 보실 수 있습니다.',
+      url: 'https://edupongpong.com/study/' },
+  ],
+};
+
+/* ── 과제 3 ── AI 융합 동아리 · 마장 에듀페스타
+   사진 한 줄 = ['번호', 'p' 또는 'v', '설명']  ·  사진 파일 위치: files/festa/<번호>.jpg */
+const TASK3 = {
+  title: 'AI 융합 동아리 및 마장 에듀페스타',
+  sub: 'AI 융합 동아리 프로젝트',
+  projects: [
+    '마장 AI 스마트 팩토리 메이커',
+    'AI 동물 로봇들이 가득한 동물원 세상',
+    '내 손으로 완성하는 AI 로봇 공연 만들기(K-POP 로봇 공연 기획자)',
+    '레고, 3D 프린터를 이용한 AI 메이커(창의융합교육)',
+    '함께 만드는 신나는 마장놀이공원',
+    'AI로봇으로 꾸미는 전래동화 시리즈',
+    '친환경 미래 AI 도시 만들기',
+    'AI 드론 활용 우리 동네 안전 프로젝트',
+    '다함께 하는 헬스 아이디어 프로젝트',
+    '생체모방 AI로봇 만들기 프로젝트',
+    '나도 작곡가! + AI 드론, 로봇 버스킹!',
+    '세상을 아름답게 하는 3D프린터 활용 메이커',
+    '에너지 전환과 미래 모빌리티 등',
+  ],
+  booth: '🚁 마장 초중고 네트워크와 함께하는 로봇, AI드론 비행 체험부스 운영',
+  galleryTitle: '마장 에듀페스타 작품',
+  items: [
+    ['01', 'p', 'K-POP 댄스 로봇 공연'],
+    ['02', 'p', 'AI 스마트 팩토리(로봇 공장)'],
+    ['03', 'p', '얼굴 로봇'],
+    ['04', 'p', '손 로봇'],
+    ['05', 'p', '사탕뽑기 로봇 체험 안내'],
+  ],
+};
+/* ===================================================================== */
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+// 사진 목록을 { 큰 그림, 작은 그림, 종류, 설명 } 모양으로 바꿉니다
+const storyItem = ([g, n, t, cap]) => ({ t, cap, thumb: `files/story/${g}/thumb/${n}.jpg`, src: `files/story/${g}/${n}.${t === 'v' ? 'mp4' : 'jpg'}` });
+const festaItem = ([n, t, cap]) => ({ t, cap, thumb: `files/festa/thumb/${n}.jpg`, src: `files/festa/${n}.${t === 'v' ? 'mp4' : 'jpg'}` });
+
+const SETS = {};          // 크게 보기에서 쓰는 사진 묶음
+const galHtml = (key, items) => {
+  SETS[key] = items;
+  return items.map((it, i) => `
+    <button class="shot" data-set="${key}" data-i="${i}" aria-label="${esc(it.cap)} 크게 보기">
+      <img src="${it.thumb}" alt="${esc(it.cap)}" loading="lazy">
+      ${it.t === 'v' ? '<i class="play" aria-hidden="true">▶</i>' : ''}
+      <span>${esc(it.cap)}</span>
+    </button>`).join('');
+};
+const head = (n, title) => `<div class="thead"><div class="num"><div><small>과제</small><b>${n}</b></div></div><h2>${esc(title)}</h2></div>`;
+const drone = cls => `<svg class="drone ${cls}" viewBox="0 0 100 60" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+  <ellipse cx="18" cy="12" rx="15" ry="4"/><ellipse cx="82" cy="12" rx="15" ry="4"/><path d="M18 14v8M82 14v8M18 22l22 10M82 22L60 32"/>
+  <rect x="36" y="26" width="28" height="18" rx="9" fill="#7df0c4" stroke="#fff"/><circle cx="50" cy="35" r="4" fill="#4a1678" stroke="none"/><path d="M40 46l-6 8M60 46l6 8"/></svg>`;
+
+let gradeAt = 0;
+function render() {
+  const S = SITE;
+  $('#menu').innerHTML = `<a href="#flow">흐름</a><a href="#task1">과제 1</a><a href="#task2">과제 2</a><a href="#task3">과제 3</a>`;
+  $('#fschool').textContent = `${S.school} ${S.year} ${S.title}`;
+  $('#fnote').textContent = `Q-AIAT 마장 · ${S.slogan}`;
+
+  $('#app').innerHTML = `
+  <section class="hero" id="top">
+    ${drone('d1')}${drone('d2')}
+    <div class="wrap">
+      <div class="badge"><div class="n"><b class="kq">Q</b><span class="kd">-</span><b class="ka">AI</b><b class="ki">A</b><b class="kt">T</b> 마장</div><small>${esc(S.slogan)}</small></div>
+      <h1>${esc(S.year)} <em>${esc(S.title)}</em></h1>
+      <p>${esc(S.school)}는 질문·AI·예술·기술을 잇는 Q-AIAT 교육으로 전 학년이 함께 자라는 AI 교육을 만들어 갑니다.</p>
+      <ul class="qaiat">${S.qaiat.map(q => `<li><i style="background:${q.color}">${q.ch}</i>${esc(q.word)}</li>`).join('')}</ul>
+    </div>
+    <svg class="hill" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90V50c200-40 380-40 600-10s420 20 600-20v70z" fill="#f7f1fb"/></svg>
+  </section>
+
+  <section class="flow wrap" id="flow" aria-label="AI 중점학교 흐름">
+    <ol>${S.flow.map(f => `<li><div class="ic" aria-hidden="true">${f.ic}</div><h3>${esc(f.name)}</h3><p>${f.desc}</p></li>`).join('')}</ol>
+  </section>
+
+  <section class="task t1 wrap" id="task1">
+    ${head(1, TASK1.title)}
+    <div class="panel">
+      <h3>${esc(TASK1.sub)}</h3>
+      <div class="grades" role="tablist">${TASK1.grades.map((g, i) => `
+        <button class="grade" role="tab" data-grade="${i}" aria-selected="${i === gradeAt}"><b>${esc(g.label)}</b><span>${esc(g.name)}</span></button>`).join('')}</div>
+      <p class="note">${esc(TASK1.note)}</p>
+      <div class="gal" id="gal1"></div>
+    </div>
+  </section>
+
+  <section class="task t2 wrap" id="task2">
+    ${head(2, TASK2.title)}
+    <div class="panel">
+      <h3>${esc(TASK2.sub)}</h3>
+      <ol class="list">${TASK2.topics.map(t => `<li>${esc(t)}</li>`).join('')}</ol>
+    </div>
+    <div class="panel">
+      <h3>${esc(TASK2.linkTitle)}</h3>
+      <div class="links" style="margin-top:0">${TASK2.links.map(l => `
+        <a class="link" href="${l.url}" target="_blank" rel="noopener"><small>${esc(l.tag)}</small><strong>${esc(l.name)}</strong><p>${esc(l.desc)}</p><em>바로 가기 ↗</em></a>`).join('')}</div>
+    </div>
+  </section>
+
+  <section class="task t3 wrap" id="task3">
+    ${head(3, TASK3.title)}
+    <div class="panel">
+      <h3>${esc(TASK3.sub)}</h3>
+      <ol class="list">${TASK3.projects.map(t => `<li>${esc(t)}</li>`).join('')}</ol>
+      <div class="booth">${esc(TASK3.booth)}</div>
+    </div>
+    <div class="panel">
+      <h3>${esc(TASK3.galleryTitle)}</h3>
+      <div class="gal">${galHtml('festa', TASK3.items.map(festaItem))}</div>
+    </div>
+  </section>`;
+  drawGrade();
+}
+function drawGrade() {
+  document.querySelectorAll('[data-grade]').forEach((b, i) => b.setAttribute('aria-selected', i === gradeAt));
+  $('#gal1').innerHTML = galHtml('grade', TASK1.grades[gradeAt].items.map(storyItem));
+}
+
+/* 크게 보기 */
+const lb = $('#lb');
+let cur = { key: '', i: 0 }, lastFocus = null;
+function showShot() {
+  const set = SETS[cur.key], it = set[cur.i];
+  $('#lbstage').innerHTML = it.t === 'v'
+    ? `<video src="${it.src}" poster="${it.thumb}" controls autoplay playsinline></video>`
+    : `<img src="${it.src}" alt="${esc(it.cap)}">`;
+  $('#lbcap').innerHTML = `${esc(it.cap)}<small>${cur.i + 1} / ${set.length}</small>`;
+}
+function closeShot() { lb.hidden = true; $('#lbstage').innerHTML = ''; document.body.style.overflow = ''; lastFocus && lastFocus.focus(); }
+function step(d) { const n = SETS[cur.key].length; cur.i = (cur.i + d + n) % n; showShot(); }
+
+document.addEventListener('click', e => {
+  const g = e.target.closest('[data-grade]');
+  if (g) { gradeAt = +g.dataset.grade; drawGrade(); return; }
+  const s = e.target.closest('.shot');
+  if (s) { lastFocus = s; cur = { key: s.dataset.set, i: +s.dataset.i }; lb.hidden = false; document.body.style.overflow = 'hidden'; showShot(); lb.querySelector('.x').focus(); return; }
+  const b = e.target.closest('[data-lb]');
+  if (b) { b.dataset.lb === 'x' ? closeShot() : step(+b.dataset.lb); return; }
+  if (e.target === lb || e.target.id === 'lbstage') closeShot();
+});
+document.addEventListener('keydown', e => {
+  if (lb.hidden) return;
+  if (e.key === 'Escape') closeShot();
+  if (e.key === 'ArrowLeft') step(-1);
+  if (e.key === 'ArrowRight') step(1);
+});
+let tx = null;
+lb.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', e => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; tx = null; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); });
+
+render();
+</script>
+</body>
+</html>
