@@ -243,16 +243,9 @@ const TASK2 = {
     '책 속 이야기로 펼치는 노벨엔지니어링 수업',
     '팅커캐드로 만드는 건축물 등',
   ],
+  // 바로 가기 링크를 넣고 싶으면 { tag: '작은 글', name: '이름', desc: '설명', url: 'https://...' } 를 links 안에 적습니다 (비워 두면 칸이 나오지 않습니다)
   linkTitle: '선생님들이 만들고 나눈 자료',
-  // 누르면 새 창으로 열립니다
-  links: [
-    { tag: '함께 성장하는 선생님', name: 'AI 에듀테크 교사 동아리 자료집',
-      desc: 'AI 에듀테크를 함께 공부하고 수업을 나누며 성장한 선생님들의 자료집입니다.',
-      url: 'https://padlet.com/embed/s023leshyly7poik17fj' },
-    { tag: '바이브 코딩 웹앱', name: '교사 Vibe ON 수업 자료',
-      desc: '선생님들이 바이브 코딩으로 직접 만든 수업용 웹앱을 체험해 보실 수 있습니다.',
-      url: 'https://edupongpong.com/study/' },
-  ],
+  links: [],
 };
 
 /* ── 과제 3 ── AI 융합 동아리 · 마장 에듀페스타
@@ -349,11 +342,12 @@ function render() {
       <h3>${esc(TASK2.sub)}</h3>
       <ol class="list">${TASK2.topics.map(t => `<li>${esc(t)}</li>`).join('')}</ol>
     </div>
+    ${TASK2.links.length ? `
     <div class="panel">
       <h3>${esc(TASK2.linkTitle)}</h3>
       <div class="links" style="margin-top:0">${TASK2.links.map(l => `
         <a class="link" href="${l.url}" target="_blank" rel="noopener"><small>${esc(l.tag)}</small><strong>${esc(l.name)}</strong><p>${esc(l.desc)}</p><em>바로 가기 ↗</em></a>`).join('')}</div>
-    </div>
+    </div>` : ''}
   </section>
 
   <section class="task t3 wrap" id="task3">
